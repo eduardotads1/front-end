@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CadastrarService } from './cadastrar.service';
 
 @Component({
   selector: 'app-cadastrar',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarComponent implements OnInit {
 
-  constructor() { }
+  nome: string;
+  email:  string;
+  senha:  string;
+
+  constructor(  private cadastrarService: CadastrarService) { }
 
   ngOnInit() {
+  }
+
+  salvar(){
+    return this.cadastrarService.salvar(this.nome, this.email, this.senha)
+    .subscribe(x =>{
+
+    })
   }
 
 }

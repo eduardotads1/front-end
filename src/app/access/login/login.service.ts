@@ -5,12 +5,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginService {
 
-  url = 'http://localhost:8080/login/cadastrar';
+  url = 'http://localhost:8080/login/acessar';
 
   constructor(private http: HttpClient) {}
 
-  save(username:string, password:string) {
-    return this.http.post(this.url, { nome:username , senha:password });
+  save(em : any) {
+    return this.http.get<any[]>(this.url, 
+      {params:{
+        id:em
+      }});
   }
 
 }

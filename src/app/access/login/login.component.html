@@ -1,7 +1,7 @@
   <form id="formulario">
     <div class="lbl">
       <label class="">Email: </label>
-      <input class="formInput" type="text" name="user" [(ngModel)]="user">
+      <input class="formInput" type="text" name="email" [(ngModel)]="email">
     </div>
 
     <div class="lbl">
@@ -9,6 +9,8 @@
       <input class="formInput" type="text" name="password" [(ngModel)]="password" >
     </div>
     
+    <button (click)="consulta()">consulta</button>
+
     <a class="btn-save" routerLink="/cadastrar">faça um novo cadastro</a>
 
   </form>

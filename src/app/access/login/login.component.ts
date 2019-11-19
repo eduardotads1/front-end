@@ -10,7 +10,7 @@ export class LoginComponent implements OnInit {
 
   lista: any[];
 
-  user: string;
+  email: string;
   password: string;
 
   constructor(
@@ -20,14 +20,8 @@ export class LoginComponent implements OnInit {
     
   }
 
-  salvar(){
-    return this.loginService.save(this.user ,this.password)
-    .subscribe(x => {
-      console.log(x);
-    },
-    error =>{
-
-    });
+  consulta(){
+    this.loginService.save(this.email).subscribe(response => this.lista = response);
   }
 
 }

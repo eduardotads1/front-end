@@ -1,3 +1,20 @@
-<p>
-  cadastrar works!
-</p>
+<form id="formularioCadastro">
+  <h1>Preencha o formulario</h1>
+  <div>
+    <label>Nome</label>
+    <input class="lbl" name="nome" [(ngModel)]="nome">
+  </div>
+
+  <div>
+    <label>Email</label>
+    <input class="lbl" name="email" [(ngModel)]="email">
+  </div>
+
+  <div>
+    <label>Senha</label>
+    <input class="lbl" name="senha" [(ngModel)]="senha">
+  </div>
+
+  <button class="btn-save" (click)="salvar()">Cadastrar</button>
+
+</form>
